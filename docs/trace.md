@@ -46,18 +46,24 @@
 
 ## 二、翻译任务清单
 
-进度：**0 / 8**
+进度：**6 / 8**
 
-- [ ] `.github/stale.yml`（25 行，7 行注释）
-- [ ] `contracts/UniswapV2Factory.sol`（49 行，2 行注释）
+- [x] `.github/stale.yml`（25 行，7 行注释）
+- [x] `contracts/UniswapV2Factory.sol`（49 行，2 行注释）
 - [ ] `contracts/UniswapV2Pair.sol`（201 行，34 行注释）
-- [ ] `contracts/libraries/Math.sol`（23 行，2 行注释）
-- [ ] `contracts/libraries/SafeMath.sol`（17 行，1 行注释）
-- [ ] `contracts/libraries/UQ112x112.sol`（20 行，6 行注释）
+- [x] `contracts/libraries/Math.sol`（23 行，2 行注释）
+- [x] `contracts/libraries/SafeMath.sol`（17 行，1 行注释）
+- [x] `contracts/libraries/UQ112x112.sol`（20 行，6 行注释）
 - [ ] `test/UniswapV2Pair.spec.ts`（284 行，7 行注释）
-- [ ] `README.md` → `README_zh.md`（24 行）
+- [x] `README.md` → `README_zh.md`（24 行）
 
 ## 三、校验记录
 
 | 文件 | 原行数 | 翻译后行数 | 已翻译行数 | 保留原样的注释 | 子代理 |
 |------|------:|---------:|---------:|--------------|-------|
+| `contracts/UniswapV2Factory.sol` | 49 | 49 | 2 | 关键字 `mapping`、字符串 `'UniswapV2: PAIR_EXISTS'` | 子代理 Factory |
+| `contracts/libraries/SafeMath.sol` | 17 | 17 | 1 | 组织名 DappHub、URL `https://github.com/dapphub/ds-math` | 子代理 SafeMath |
+| `README.md` → `README_zh.md` | 24 | 24 | 6 行正文/标题 | 标题 `Uniswap V2`、两行徽章、URL 与域名链接文本、反引号命令 `yarn` / `yarn compile` / `yarn test` / `node@>=10` | 子代理 README |
+| `contracts/libraries/Math.sol` | 23 | 23 | 2 | 原词 `babylonian method`（括注保留）、Wikipedia URL | 子代理 Math |
+| `.github/stale.yml` | 25 | 25 | 7 | `markComment` 多行字符串（配置值，非注释）、`probot-stale`、URL、`stale`、`[]`、`false` | 子代理 stale |
+| `contracts/libraries/UQ112x112.sol` | 20 | 20 | 6 | 类型名 `UQ112x112` / `uint112`、URL、表达式 `[0, 2**112 - 1]` / `1 / 2**112` | 子代理 UQ112x112 |
