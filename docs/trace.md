@@ -46,7 +46,7 @@
 
 ## 二、翻译任务清单
 
-进度：**6 / 8**
+进度：**7 / 8**
 
 - [x] `.github/stale.yml`（25 行，7 行注释）
 - [x] `contracts/UniswapV2Factory.sol`（49 行，2 行注释）
@@ -54,7 +54,7 @@
 - [x] `contracts/libraries/Math.sol`（23 行，2 行注释）
 - [x] `contracts/libraries/SafeMath.sol`（17 行，1 行注释）
 - [x] `contracts/libraries/UQ112x112.sol`（20 行，6 行注释）
-- [ ] `test/UniswapV2Pair.spec.ts`（284 行，7 行注释）
+- [x] `test/UniswapV2Pair.spec.ts`（284 行，7 行注释）
 - [x] `README.md` → `README_zh.md`（24 行）
 
 ## 三、校验记录
@@ -67,3 +67,4 @@
 | `contracts/libraries/Math.sol` | 23 | 23 | 2 | 原词 `babylonian method`（括注保留）、Wikipedia URL | 子代理 Math |
 | `.github/stale.yml` | 25 | 25 | 7 | `markComment` 多行字符串（配置值，非注释）、`probot-stale`、URL、`stale`、`[]`、`false` | 子代理 stale |
 | `contracts/libraries/UQ112x112.sol` | 20 | 20 | 6 | 类型名 `UQ112x112` / `uint112`、URL、表达式 `[0, 2**112 - 1]` / `1 / 2**112` | 子代理 UQ112x112 |
+| `test/UniswapV2Pair.spec.ts` | 284 | 284 | 7 | 变量名 `amountIn` / `amountOut`、公式 `floor(...)` / `ceiling(...)`、`price{0,1}CumulativeLast`、`MINIMUM_LIQUIDITY`、gas | 子代理 Pair.spec |
