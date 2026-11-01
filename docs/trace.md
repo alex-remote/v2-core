@@ -46,11 +46,11 @@
 
 ## 二、翻译任务清单
 
-进度：**7 / 8**
+进度：**8 / 8**
 
 - [x] `.github/stale.yml`（25 行，7 行注释）
 - [x] `contracts/UniswapV2Factory.sol`（49 行，2 行注释）
-- [ ] `contracts/UniswapV2Pair.sol`（201 行，34 行注释）
+- [x] `contracts/UniswapV2Pair.sol`（201 行，34 行注释）
 - [x] `contracts/libraries/Math.sol`（23 行，2 行注释）
 - [x] `contracts/libraries/SafeMath.sol`（17 行，1 行注释）
 - [x] `contracts/libraries/UQ112x112.sol`（20 行，6 行注释）
@@ -68,3 +68,11 @@
 | `.github/stale.yml` | 25 | 25 | 7 | `markComment` 多行字符串（配置值，非注释）、`probot-stale`、URL、`stale`、`[]`、`false` | 子代理 stale |
 | `contracts/libraries/UQ112x112.sol` | 20 | 20 | 6 | 类型名 `UQ112x112` / `uint112`、URL、表达式 `[0, 2**112 - 1]` / `1 / 2**112` | 子代理 UQ112x112 |
 | `test/UniswapV2Pair.spec.ts` | 284 | 284 | 7 | 变量名 `amountIn` / `amountOut`、公式 `floor(...)` / `ceiling(...)`、`price{0,1}CumulativeLast`、`MINIMUM_LIQUIDITY`、gas | 子代理 Pair.spec |
+| `contracts/UniswapV2Pair.sol` | 201 | 201 | 34 | 标识符 `getReserves` / `factory` / `sqrt(k)` / `_mintFee` / `totalSupply` / `MINIMUM_LIQUIDITY` / `reserve0` / `reserve1` / `_token{0,1}` / `reserve{0,1}Adjusted`、术语 gas / stack too deep、运算符 `*` `+` | 子代理 Pair |
+
+## 四、最终校验
+
+- 7 个源文件逐行对比基准提交 `6a9e7c9`：行数全部不变；把每行注释标记（`//` 或 `#`）及其后内容去掉后，新旧文件完全一致，说明代码零改动；所有被翻译的注释行都已含中文，没有遗漏的英文注释。
+- `README_zh.md` 与 `README.md` 同为 24 行，逐行对应，原件未改动。
+- 用 `solc@0.5.16`（项目 `.waffle.json` 指定的编译器版本）编译 `contracts/` 下全部合约、接口和库，编译通过，中文注释不影响编译。
+- 总计：8 个文件，翻译 59 行注释，并新增 1 个 24 行的 `README_zh.md`。
